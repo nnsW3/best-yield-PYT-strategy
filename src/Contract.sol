@@ -164,6 +164,11 @@ contract IdlePYT is ILendingProtocol {
     return idleCDO.getContractValue();
   }
 
+  /**
+   * Get the new apr split ratio in IdleCDO. Taken from here https://github.com/Idle-Labs/idle-tranches/blob/448c707a690e20bf2ef3e5a233fa97a329b34eb0/contracts/IdleCDO.sol#L454
+   *
+   * @return _new new apr split ratio for IdleCDO
+   */
   function _calcNewAPRSplit(uint256 ratio) internal pure returns (uint256 _new){
     uint256 aux;
     if (ratio >= AA_RATIO_LIM_UP) {
