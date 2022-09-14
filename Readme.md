@@ -1,9 +1,7 @@
 # Idle Best yield strategy for Idle PYTs
 This strategy allows [Idle Best yield](https://github.com/Idle-Labs/idle-contracts) to deploy capital in [Idle Perpetual Yield Tranches](https://github.com/Idle-Labs/idle-tranches).
 
-Cloneable instance deployed at `0xd3af1317450d291c328525a8eb183d5cca45553d`
-
-Clearpool USDC PYT instance deployed at `0x0c893a7c403f7bB5e1Cae656418A0096Ef558e08`
+Cloneable instance deployed at `0xdb1b149177b5819cf467ad6519cf55416789300a` (used in Clearpool USDC PYT)
 
 ## Install
 
