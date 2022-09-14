@@ -38,10 +38,6 @@ contract IdlePYT is ILendingProtocol {
   error Initialized();
   error Unauthorized();
 
-  constructor() {
-    token = address(1);
-  }
-
   /**
    * @param _token : tranche token address
    * @param _idleToken : idleToken address
@@ -160,7 +156,7 @@ contract IdlePYT is ILendingProtocol {
    *
    * @return underlying tokens available
    */
-  function availableLiquidity() external view returns (uint256) {
+  function availableLiquidity() external virtual view returns (uint256) {
     return idleCDO.getContractValue();
   }
 
