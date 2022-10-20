@@ -3,6 +3,9 @@ This strategy allows [Idle Best yield](https://github.com/Idle-Labs/idle-contrac
 
 Cloneable instance deployed at `0xdb1b149177b5819cf467ad6519cf55416789300a` (used in Clearpool USDC PYT)
 
+- Clearpool DAI PYT 
+`0x67e78ED1cC4732816816A62F2e99CDC5CfaAc06E`
+
 ## Install
 
 `forge install`
