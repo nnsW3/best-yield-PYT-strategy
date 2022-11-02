@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.10;
 interface IIdleCDO {
   function AATranche() external view returns(address);
   function BBTranche() external view returns(address);

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.10;
 
 import "forge-std/Test.sol";
 import "../src/interfaces/IIdleCDO.sol";
@@ -7,7 +7,7 @@ import "../src/interfaces/IIdleToken.sol";
 import "../src/ClearpoolStrategy.sol";
 import "@oz-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol";
 
-contract ClearpoolStrategyTest is Test {
+contract TestClearpoolStrategy is Test {
   using stdStorage for StdStorage;
 
   address public constant IDLE_TOKEN = 0x5274891bEC421B39D23760c04A6755eCB444797C; // idleUSDC
@@ -58,9 +58,16 @@ contract ClearpoolStrategyTest is Test {
   }
 
   function testMint() public {
-    uint256 _tranchePrice = strategy.getPriceInToken();
     uint256 _amount = 1000e6;
-    deposit(_amount);
+    // move idleToken funds in to the tested strategy
+    _updateIdleTokenStrategy(address(strategy));
+    initialTrancheBalance = tranche.balanceOf(address(idleToken));
+    uint256 _tranchePrice = strategy.getPriceInToken();
+    // deposit
+    idleToken.mintIdleToken(_amount, true, address(0));
+    // put funds in the strategy
+    vm.prank(idleToken.rebalancer());
+    idleToken.rebalance();
 
     uint256 trancheBal = tranche.balanceOf(address(idleToken));
     assertEq(trancheBal - initialTrancheBalance, _amount * 1e18 / _tranchePrice);
@@ -95,6 +102,7 @@ contract ClearpoolStrategyTest is Test {
     // deposit some tokens in the junior side to balance the ratio a bit
     underlying.approve(address(idleCDO), type(uint256).max);
     idleCDO.depositBB(1000000e6);
+    vm.roll(block.number + 1);
     _updateIdleTokenStrategy(address(strategy));
     assertEq(strategy.nextSupplyRate(0), strategy.getAPR());
 
