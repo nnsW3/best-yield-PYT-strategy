@@ -76,7 +76,7 @@ contract IdlePYT is ILendingProtocol {
    * @return newAAApr : yearly net rate
    */
   function nextSupplyRate(uint256 _amount)
-    external view
+    external view virtual
     returns (uint256 newAAApr) {
       IERC20Upgradeable _token = IERC20Upgradeable(token);
       IIdleCDO _idleCDO = idleCDO;
@@ -122,7 +122,7 @@ contract IdlePYT is ILendingProtocol {
    * @return minted : tranche tokens minted
    */
   function mint()
-    external
+    external virtual
     returns (uint256 minted) {
       _onlyIdle();
       uint256 balance = underlyingContract.balanceOf(address(this));
@@ -142,7 +142,7 @@ contract IdlePYT is ILendingProtocol {
    * @return tokens underlying tokens redeemd
    */
   function redeem(address _account)
-    external
+    external virtual
     returns (uint256 tokens) {
       _onlyIdle();
       idleCDO.withdrawAA(tokenContract.balanceOf(address(this)));
