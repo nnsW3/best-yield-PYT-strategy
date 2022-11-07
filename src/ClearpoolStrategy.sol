@@ -13,7 +13,7 @@ import "@oz-upgradeable/contracts/token/ERC20/utils/SafeERC20Upgradeable.sol";
 import "./Contract.sol";
 import "./interfaces/IIdleCDOStrategy.sol";
 import "./interfaces/IIdleCDOStrategyClear.sol";
-import "forge-std/console.sol";
+
 // This contract should be deployed with a minimal proxy factory
 contract IdlePYTClear is IdlePYT {
   /**
