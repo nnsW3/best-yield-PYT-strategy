@@ -13,6 +13,7 @@ import "@oz-upgradeable/contracts/token/ERC20/utils/SafeERC20Upgradeable.sol";
 import "./Contract.sol";
 import "./interfaces/IIdleCDOStrategy.sol";
 import "./interfaces/IIdleCDOStrategyClear.sol";
+import "./interfaces/IPoolMaster.sol";
 
 // This contract should be deployed with a minimal proxy factory
 contract IdlePYTClear is IdlePYT {
@@ -22,9 +23,8 @@ contract IdlePYTClear is IdlePYT {
    * @return underlying tokens available
    */
   function availableLiquidity() external override view returns (uint256) {
-    IERC20Upgradeable _underlying = underlyingContract;
     IIdleCDO _cdo = idleCDO;
-    return _underlying.balanceOf(address(_cdo)) +
-      _underlying.balanceOf(IIdleCDOStrategyClear(_cdo.strategy()).cpToken());
+    IPoolMaster cpToken = IPoolMaster(IIdleCDOStrategyClear(_cdo.strategy()).cpToken());
+    return underlyingContract.balanceOf(address(_cdo)) + cpToken.availableToWithdraw();
   }
 }

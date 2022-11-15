@@ -33,6 +33,7 @@ contract IdlePYT is ILendingProtocol {
   uint256 internal constant AA_RATIO_LIM_DOWN = 50000;
   uint256 internal constant FULL_ALLOC = 100000;
   uint256 internal constant ONE_TRANCHE = 1e18;
+  bool public isSenior;
 
   // Errors
   error Initialized();
@@ -54,6 +55,7 @@ contract IdlePYT is ILendingProtocol {
 
     idleCDO = IIdleCDO(_cdo);
     token = _token;
+    isSenior = idleCDO.AATranche() == _token;
     tokenContract = IERC20Upgradeable(_token);
     underlying = idleCDO.token();
     underlyingContract = IERC20Upgradeable(idleCDO.token());
@@ -127,7 +129,11 @@ contract IdlePYT is ILendingProtocol {
       _onlyIdle();
       uint256 balance = underlyingContract.balanceOf(address(this));
       if (balance != 0) {
-        idleCDO.depositAA(balance);
+        if (isSenior) {
+          idleCDO.depositAA(balance);
+        } else {
+          idleCDO.depositBB(balance);
+        }
         IERC20Upgradeable _token = tokenContract;
         minted = _token.balanceOf(address(this));
         _token.safeTransfer(msg.sender, minted);
@@ -145,7 +151,12 @@ contract IdlePYT is ILendingProtocol {
     external virtual
     returns (uint256 tokens) {
       _onlyIdle();
-      idleCDO.withdrawAA(tokenContract.balanceOf(address(this)));
+      uint256 _bal = tokenContract.balanceOf(address(this));
+      if (isSenior) {
+        idleCDO.withdrawAA(_bal);
+      } else {
+        idleCDO.withdrawBB(_bal);
+      }
       IERC20Upgradeable _underlying = underlyingContract;
       tokens = _underlying.balanceOf(address(this));
       _underlying.safeTransfer(_account, tokens);

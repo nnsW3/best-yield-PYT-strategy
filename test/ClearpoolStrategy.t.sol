@@ -4,6 +4,7 @@ pragma solidity ^0.8.10;
 import "forge-std/Test.sol";
 import "../src/interfaces/IIdleCDO.sol";
 import "../src/interfaces/IIdleToken.sol";
+import "../src/interfaces/IPoolMaster.sol";
 import "../src/ClearpoolStrategy.sol";
 import "@oz-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol";
 
@@ -115,12 +116,17 @@ contract TestClearpoolStrategy is Test {
     );
   }
 
-  function testAvailableLiquidity() public {
+  function testAvailableLiquidity() virtual public {
     underlying.approve(address(idleCDO), type(uint256).max);
     uint256 amount = 100e6;
     idleCDO.depositBB(amount);
 
-    assertEq(strategy.availableLiquidity(), underlying.balanceOf(address(idleCDO)) + underlying.balanceOf(CP_TOKEN));
+    IPoolMaster cpToken = IPoolMaster(IIdleCDOStrategyClear(idleCDO.strategy()).cpToken());
+
+    assertEq(
+      strategy.availableLiquidity(), 
+      underlying.balanceOf(address(idleCDO)) + cpToken.availableToWithdraw()
+    );
   }
 
   function deposit(uint256 _amount) public {
