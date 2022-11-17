@@ -8,6 +8,9 @@ Cloneable instance for both tranches deployed at `0xa575b3a6d88e9c1b5196cb7e2a14
 - 0xfE92E0973ff0267447f8C711d16A849837C73264 ->  bb tranche of cpfolusdc
 - 0x3225cb1d7bDFddEA35178FD1667D8BD62afb0DDe ->  bb tranche of rwinusdc
 
+- 0xDd585E6e3AcB30594E7b70DCee34400E172cee31 -> aa tranche of cpfoldai
+- 0xFF12A5eaE3E60096c774AD7211AE5C0c5b5Cc0F5 -> aa tranche of cpwinusdc
+
 ## Install
 
 `forge install`
