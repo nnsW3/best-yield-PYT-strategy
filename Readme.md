@@ -1,13 +1,12 @@
 # Idle Best yield strategy for Idle PYTs
 This strategy allows [Idle Best yield](https://github.com/Idle-Labs/idle-contracts) to deploy capital in [Idle Perpetual Yield Tranches](https://github.com/Idle-Labs/idle-tranches).
 
-Cloneable instance for Senior (AA) tranches deployed at `0xdb1b149177b5819cf467ad6519cf55416789300a` (used in Clearpool USDC PYT)
-- Clearpool DAI PYT 
-`0x67e78ED1cC4732816816A62F2e99CDC5CfaAc06E`
+Cloneable instance for both tranches deployed at `0xa575b3a6d88e9c1b5196cb7e2a14962a5c533559` 
 
-Cloneable instance for Junior (BB) tranches deployed at
-`0xff31c69a983bac080f23f21be965650758d19d18` (used in Clearpool USDC PYT for wintermute junior)
-- Clearpool USDC PYT for wintermute junior `0x0b34f266B8b2f000cd0b543Dea1fd002bF7ab4ff`
+- 0x7eC173d5bE66c83487f16f1ca304AC72639e80d4 ->  cpwinusdc.BBTranche
+- 0xD19f42Ce3b799a4D23176da193673b146968C934 ->  rfolusdc.BBTranche
+- 0xfE92E0973ff0267447f8C711d16A849837C73264 ->  bb tranche of cpfolusdc
+- 0x3225cb1d7bDFddEA35178FD1667D8BD62afb0DDe ->  bb tranche of rwinusdc
 
 ## Install
 
