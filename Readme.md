@@ -12,8 +12,11 @@ Cloneable instance for both tranches deployed at
   - 0xFF12A5eaE3E60096c774AD7211AE5C0c5b5Cc0F5 -> aa tranche of cpwinusdc
   - 0x75DA360514532813B460b2Ba30F444A1fa28c9d7 -> aa tranche of rwindai
 
-- Cloneable `0xcf93471a82241c2be469d83d960932721b098ffb` 
+- Cloneable Euler Staking `0xcf93471a82241c2be469d83d960932721b098ffb` 
   -> used directly for bb tranche of eUSDCStaking PYT
+
+- Cloneable Morpho Aave `0x9db5a6bd77572748e541a0cf42f787f5fe03049e` 
+  -> used directly for bb tranche of maUSDC PYT
 
 ## Install
 
