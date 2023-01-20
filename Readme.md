@@ -14,6 +14,9 @@ Cloneable instance for both tranches deployed at
 
 - Cloneable Euler Staking `0xcf93471a82241c2be469d83d960932721b098ffb` 
   -> used directly for bb tranche of eUSDCStaking PYT
+  - 0x6C1a844E3077e6C39226C15b857436a6a92Be5C0 -> aa tranche of eUSDCStaking PYT
+  - 0xAB3919896975F43A81325B0Ca98b72249E714e6C -> aa tranche of eUSDTStaking PYT
+  - 0xC24e0dd3A0Bc6f19aEEc2d7985dd3940D59dB698 -> aa tranche of eWETHStaking PYT
 
 - Cloneable Morpho Aave `0x9db5a6bd77572748e541a0cf42f787f5fe03049e` 
   -> used directly for bb tranche of maUSDC PYT
