@@ -20,6 +20,8 @@ Cloneable instance for both tranches deployed at
 
 - Cloneable Morpho Aave `0x9db5a6bd77572748e541a0cf42f787f5fe03049e` 
   -> used directly for bb tranche of maUSDC PYT
+  - `0x5Ac8094308918C3566330EEAe7cf4becaDACEc3E` -> bb tranche of maUSDT PYT
+  - `0x37Dd9A73a84bb0EF562C17b3f7aD34001FEdAf38` -> bb tranche of maDAI PYT
 
 ## Install
 
