@@ -17,7 +17,7 @@ Cloneable instance for both tranches deployed at
   - 0x6C1a844E3077e6C39226C15b857436a6a92Be5C0 -> aa tranche of eUSDCStaking PYT
   - 0xAB3919896975F43A81325B0Ca98b72249E714e6C -> aa tranche of eUSDTStaking PYT
   - 0xC24e0dd3A0Bc6f19aEEc2d7985dd3940D59dB698 -> aa tranche of eWETHStaking PYT
-  - 0x0D578c4F710A60CF6F3C6E0754356C94ad3CeD24 -> aa tranche of eDAIStaking PYT
+  - 0xC9C83bEBd31aff93a2353920F2513D372847A517 -> aa tranche of eDAIStaking PYT
 
   - 0x13b9a2b6434C3b0955F2b164784CB39dFF373C7c -> bb tranche of eUSDTStaking PYT
   - 0x7188A402Ebd2638d6CccB855019727616a81bBd9 -> bb tranche of eDAIStaking PYT
