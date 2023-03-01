@@ -21,11 +21,13 @@ Cloneable instance for both tranches deployed at
 
   - 0x13b9a2b6434C3b0955F2b164784CB39dFF373C7c -> bb tranche of eUSDTStaking PYT
   - 0x7188A402Ebd2638d6CccB855019727616a81bBd9 -> bb tranche of eDAIStaking PYT
+  - 0xD57017632c1e6819370107d8Db4b1D372213a168 -> bb tranche of eWETHStaking PYT
 
 - Cloneable Morpho Aave `0x9db5a6bd77572748e541a0cf42f787f5fe03049e` 
   -> used directly for bb tranche of maUSDC PYT
   - 0x5Ac8094308918C3566330EEAe7cf4becaDACEc3E -> bb tranche of maUSDT PYT
   - 0x37Dd9A73a84bb0EF562C17b3f7aD34001FEdAf38 -> bb tranche of maDAI PYT
+  - 0x9750c398993862Ebc9C5A30a9F8Be78Daa440677 -> bb tranche of maWETH PYT
 
 ## Install
 
