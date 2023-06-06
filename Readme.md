@@ -9,12 +9,14 @@ Cloneable instance for both tranches deployed at
   - 0x3225cb1d7bDFddEA35178FD1667D8BD62afb0DDe ->  bb tranche of rwinusdc
   - 0x46e30328920036d7BffCcc14348808bF65C6DaEE ->  bb tranche of cpporusdc
   - 0x9115469239A781e52A518158CBAf36FAfc8B2A77 ->  bb tranche of cpfasusdt
+  - 0xC72e841B460Ec6D3e969e5C457A1961463e12e00 ->  bb tranche of cpfasusdc
 
   - 0xDd585E6e3AcB30594E7b70DCee34400E172cee31 -> aa tranche of cpfoldai
   - 0xFF12A5eaE3E60096c774AD7211AE5C0c5b5Cc0F5 -> aa tranche of cpwinusdc
   - 0x75DA360514532813B460b2Ba30F444A1fa28c9d7 -> aa tranche of rwindai
   - 0xF1fdd2FbB34969B4cD034331D37A7360B0b75c51 -> aa tranche of cpporusdc
   - 0xAC64A8b5Fae61b31F9eDc6e3d15673039D8122B1 -> aa tranche of cpfasusdt
+  - 0x3E9A5c91eC8b5022E88d1C2599fE3CD98406D898 -> aa tranche of cpfasusdc
 
 - Cloneable `0x6FA86028323Ba310FE4488F74085De99Ed0264d8` instance for Clearpool DAI pools with PSM
   - 0x6FA86028323Ba310FE4488F74085De99Ed0264d8 -> aa tranche of cppordai
