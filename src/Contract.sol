@@ -176,14 +176,15 @@ contract IdlePYT is ILendingProtocol {
    *
    * @return _new new apr split ratio for IdleCDO
    */
-  function _calcNewAPRSplit(uint256 ratio) internal pure returns (uint256 _new){
+  function _calcNewAPRSplit(uint256 ratio) internal view returns (uint256 _new){
+    uint256 minSplit = idleCDO.minAprSplitAYS();
     uint256 aux;
     if (ratio >= AA_RATIO_LIM_UP) {
       aux = AA_RATIO_LIM_UP;
-    } else if (ratio > AA_RATIO_LIM_DOWN) {
+    } else if (ratio > minSplit) {
       aux = ratio;
     } else {
-      aux = AA_RATIO_LIM_DOWN;
+      aux = minSplit;
     }
     _new = aux * ratio / FULL_ALLOC;
   }

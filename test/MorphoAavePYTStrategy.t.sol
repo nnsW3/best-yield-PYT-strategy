@@ -27,6 +27,7 @@ contract TestMorphoAavePYTStrategy is Test {
   uint256 public initialTrancheBalance;
   
   function setUp() public {
+    vm.createSelectFork('mainnet', 19034940);
     idleToken = IIdleToken(IDLE_TOKEN);
     idleCDO = IIdleCDO(CDO);
     underlying = IERC20Upgradeable(UNDERLYING);

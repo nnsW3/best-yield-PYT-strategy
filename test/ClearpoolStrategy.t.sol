@@ -8,14 +8,14 @@ import "../src/interfaces/IPoolMaster.sol";
 import "../src/ClearpoolStrategy.sol";
 import "@oz-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol";
 
-contract TestClearpoolStrategy is Test {
+contract TestClearpoolStrategyAA is Test {
   using stdStorage for StdStorage;
 
   address public constant IDLE_TOKEN = 0x5274891bEC421B39D23760c04A6755eCB444797C; // idleUSDC
   address public constant UNDERLYING = 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48; // USDC
-  address public constant AA_TRANCHE = 0xb86264c21418aA75F7c337B1821CcB4Ff4d57673; // AA_cpWIN-USDC
-  address public constant CDO = 0xDBCEE5AE2E9DAf0F5d93473e08780C9f45DfEb93; // clearpool cdo
-  address public constant CP_TOKEN = 0xCb288b6d30738db7E3998159d192615769794B5b; // cpWIN-USDC
+  address public constant AA_TRANCHE = 0x00b51Fc6384A120Eac68bEA38b889Ea92524ab93; // AA_cpWIN-USDC
+  address public constant CDO = 0xd12f9248dEb1D972AA16022B399ee1662d51aD22; // clearpool cdo
+  address public constant CP_TOKEN = 0xA0749F550a336B031f63bD095062204E1A56055B; // cpWINC-USDC
   IIdleToken public idleToken;
   IIdleCDO public idleCDO;
   IERC20Upgradeable public underlying;
@@ -24,6 +24,7 @@ contract TestClearpoolStrategy is Test {
   uint256 public initialTrancheBalance;
   
   function setUp() public {
+    vm.createSelectFork('mainnet', 19034940);
     idleToken = IIdleToken(IDLE_TOKEN);
     idleCDO = IIdleCDO(CDO);
     underlying = IERC20Upgradeable(UNDERLYING);

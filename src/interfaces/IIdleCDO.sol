@@ -15,6 +15,7 @@ interface IIdleCDO {
   function getApr(address _tranche) external view returns(uint256);
   function getContractValue() external view returns(uint256);
   function trancheAPRSplitRatio() external view returns(uint256);
+  function minAprSplitAYS() external view returns(uint256);
   function getCurrentAARatio() external view returns(uint256);
   function tranchePrice(address _tranche) external view returns(uint256);
   function virtualPrice(address _tranche) external view returns(uint256);
