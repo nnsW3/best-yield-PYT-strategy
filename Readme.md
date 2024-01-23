@@ -39,6 +39,13 @@ Cloneable instance for both tranches deployed at
   - 0x37Dd9A73a84bb0EF562C17b3f7aD34001FEdAf38 -> bb tranche of maDAI PYT
   - 0x9750c398993862Ebc9C5A30a9F8Be78Daa440677 -> bb tranche of maWETH PYT
 
+
+---
+
+Version with minAprSplitAYS 
+
+- Cloneable Metamorpho `0x96Dd27112bDd615c3A2D649fe22d8eE27e448152` -> aa tranche of steakUSDC mm vault
+
 ## Install
 
 `forge install`
