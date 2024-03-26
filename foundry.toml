@@ -8,3 +8,8 @@ evm_version = 'shanghai'
 
 [rpc_endpoints]
 mainnet = "${ETH_RPC_URL}"
+optimism = "${OPTIMISM_RPC_URL}"
+
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+optimism = { key = "${OPTIMISM_ETHERSCAN_API_KEY}" }

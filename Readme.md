@@ -46,6 +46,14 @@ Version with minAprSplitAYS
 
 - Cloneable Metamorpho `0x96Dd27112bDd615c3A2D649fe22d8eE27e448152` -> aa tranche of steakUSDC mm vault
 
+### Optimism
+Version with minAprSplitAYS 
+
+- Cloneable Clearpool `0x133F1C751f25C2AAf0E83f0609A67074915144A4` -> aa cpfasUSDT
+  - 0x0fDCdC3dF70420BAD4f7EAD4852F961b5D809Df1 -> aa cpporUSDT
+  - 0x3303E8432fD58317EfE65CcF968E84835C73d2D6 -> aa cpwincUSDC
+  - 0xd24A6f07E78165AD865e9Ee2FB6FfF894F5B6A0C -> aa cpbasUSDT
+
 ## Install
 
 `forge install`
