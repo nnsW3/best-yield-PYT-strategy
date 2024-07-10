@@ -2,7 +2,7 @@
 pragma solidity ^0.8.10;
 
 /**
- * @title: Idle Perpertual Yield Tranches wrapper for senior tranche of the Euler staking PYT
+ * @title: Idle Perpetual Yield Tranches wrapper for senior tranche of the Euler staking PYT
  * @summary: Used for interacting with Idle senior PYTs. Has
  *           a common interface with all other protocol wrappers.
  *           This contract holds assets only during a tx, after tx it should be empty
